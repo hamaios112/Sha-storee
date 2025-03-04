@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://archive.org/download/esign-sha-store-5.0.2-1741025461/ESign%20-%20SHA%20Store_5.0.2_1741025461.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<string>https://archive.org/download/img-7215_202503/IMG_7215.jpeg</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<string>https://archive.org/download/img-7215_202503/IMG_7215.jpeg</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>p3.xyz.yyyue.esign</string>
+				<key>bundle-version</key>
+				<string>5.0.2</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>subtitle</key>
+				<string>Esign</string>
+				<key>title</key>
+				<string> 
+Esign 
+       
+شا ستۆر گەنجینەیەک پڕ لە یاری و بەرنامە.
+</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

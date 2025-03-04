@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container {
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-item:hover {
+    background-color: #e0e0e0;
+}
+
+.app-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-description {
+    font-size: 9px;
+    color: #666666;
+}
+
+.get-button {
+    background-color: #ff8f05;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    transition: opacity 0.3s;
+}
+
+.bottom-nav.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bottom-nav button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-nav button i {
+    font-size: 20px;
+}
+
+.bottom-nav button:hover {
+    color: #ff8f05;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-header .app-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #ff8f05;
+}
+
+.app-details, .whats-new, .previews {
+    margin-bottom: 20px;
+text-align: right;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 100;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.slides img, .slides video {
+    width: 290;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+
+}
+
+.info-section button {
+    background-color: #ff8f05;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.info-section button:hover {
+    background-color: #ff8f05;
+}
+
+/* About Section Styles */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rotating-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(orange, yellow, orange);
+    animation: rotate 5s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5);
+    z-index: 1;
+}
+
+.about-image {
+    width: 180px; /* Slightly smaller than the circle */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2; /* Ensure the image is above the rotating circle */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+    max-width: 600px;
+}
+
+.accordion-item {
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    text-align: right;
+    border: none;
+    background: none;
+color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+   
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+text-align: right;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 15px;
+    max-height: 200px;
+}
+
+
+
+/* Shadyar Styles */
+shadyar {
+  text-align: center;
+  margin-top: 30px;
+  padding: 6px;
+  background-color: #ffbd2e;
+  border-radius: 12px;
+}
+
+.shadyar-text {
+  font-family: 'NRT-Reg', sans-serif; /* Main text font */
+  color: black;
+  font-size: 14px;
+  
+}
+
+.shadyar-link {
+  font-family: nrtbold;
+  color: #ffbd2e;
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.shadyar-link:hover {
+  color: #333; /* Optional hover effect for the link */
+}
