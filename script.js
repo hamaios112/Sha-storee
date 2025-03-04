@@ -43,7 +43,7 @@ function openDetail(appId) {
                 'img/picsart/picsart2.png',
                 'https://ia904506.us.archive.org/0/items/rpreplay-final-1741034617/RPReplay_Final1741034617.mov'
             ],
-            url: 'https://google.com'
+            url: 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/picsart.plist'
         },
         'subwaysurfers': {
             title: 'Subway Surfers',
@@ -60,7 +60,7 @@ function openDetail(appId) {
 
                 'img/subway/subway3.png'            
             ],
-            url: 'https://www.google.com'
+            url: 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/subway.plist'
         },
         'gettingoverit': {
             title: 'Getting Over It',
@@ -77,7 +77,7 @@ function openDetail(appId) {
                           'img/getting/getting3.png'
                
             ],
-            url: 'https://www.google.com'
+            url: 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/getting.plist'
         },
         'roblox': {
             title: 'Roblox',
@@ -94,7 +94,7 @@ function openDetail(appId) {
                           'img/roblox/roblox3.png'
                
             ],
-            url: 'https://www.google.com'
+            url: 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/roblox.plist'
         },
         'esign': {
             title: 'ESign',
@@ -111,7 +111,7 @@ function openDetail(appId) {
                           'img/esign/esign3.png'
                
             ],
-            url: 'https://www.google.com'
+            url: 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/esign.plist'
         }
     };
 
@@ -158,8 +158,12 @@ function openDetail(appId) {
 
 function redirectToApp() {
     const apps = {
-        'picsart': 'https://www.snapchat.com',
-        'google': 'https://www.google.com'
+        'picsart': 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/picsart.plist',
+        'subwaysurfers': 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/subway.plist',
+        'gettingoverit': 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/getting.plist',
+        'roblox': 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/roblox.plist',
+        'esign': 'itms-services://?action=download-manifest&amp;url=https://hamaios112.github.io/Sha-storee/plist/esign.plist'
+
     };
     window.location.href = apps[currentAppId];
 }
