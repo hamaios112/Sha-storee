@@ -1,0 +1,194 @@
+// index.js
+
+// دروستکردنی پەڕەی HTML بە شێوەیەکی سادە
+document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA Store</title>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head> 
+        <style>
+          @font-face {
+            font-family: nrtbold;
+            src: url(fonts/NRT-Bold.ttf);
+          }
+        </style>
+        <style>
+          @font-face {
+            font-family: nrtregular;
+            src: url(fonts/NRT-Reg.ttf);
+          }
+        </style>
+<body>
+    <div class="container">
+        <!-- Saraki -->
+        <div id="main" class="section active">
+            <h1>SHA Store</h1>
+            <div class="app-list">
+                <div class="app-item" onclick="openDetail('picsart')">
+                    <img src="img/picsart.png" alt="PicsArt" class="app-image">
+                    <div class="app-info" >
+                        <h3>PicsArt</h3>
+                        <p class="app-description">Apps</p>
+                    </div>
+                    <p class="get-button">GET</p>
+                </div>
+                <div class="app-item" onclick="openDetail('subwaysurfers')">
+                    <img src="img/subway.png" alt="Subway Surfers" class="app-image">
+                    <div class="app-info">
+                        <h3>Subway Surfers</h3>
+                        <p class="app-description">Games</p>
+                    </div>
+                    <p class="get-button">GET</p>
+                </div>
+                <div class="app-item" onclick="openDetail('gettingoverit')">
+                    <img src="img/getting.png" alt="Getting Over It" class="app-image">
+                    <div class="app-info" >
+                        <h3>Getting Over It</h3>
+                        <p class="app-description">Games</p>
+                    </div>
+                    <p class="get-button">GET</p>
+                </div>
+
+                <div class="app-item" onclick="openDetail('roblox')">
+                    <img src="img/roblox.png" alt="Roblox" class="app-image">
+                    <div class="app-info" >
+                        <h3>Roblox</h3>
+                        <p class="app-description">Apps</p>
+                    </div>
+                    <p class="get-button">GET</p>
+                </div>
+
+                <div class="app-item" onclick="openDetail('esign')">
+                    <img src="img/esign.png" alt="Esign" class="app-image">
+                    <div class="app-info" >
+                        <h3>ESign</h3>
+                        <p class="app-description">Apps</p>
+                    </div>
+                    <p class="get-button">GET</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- page-->
+        <div id="detail" class="section">
+            <div class="detail-header">
+                <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+
+                <div class="app-info">
+ 
+
+
+                   <img id="detail-app-image" src="path_to_snap_image.jpg" alt="App Image" class="app-image">
+                    <h1 id="detail-title">Snap</h1>
+
+            <div class="info-section">
+
+
+
+                <button onclick="redirectToApp()" style="font-family: nrtbold;" >دابەزاندن</button>
+            </div>
+
+                </div>
+            </div>
+ 
+
+            <div class="app-details">
+
+
+
+                <p style="font-family: nrtregular; font-align: right;" ><strong style="font-family: nrtbold; font-align: right;"> گەشەپێدەر</strong> پیکس ئاڕت :</p>
+                <p style="font-family: nrtregular; " ><strong style="font-family: nrtbold;" >زمانەکانی ئەپ</strong> ئینگلیزی ، عەرەبی ، ئەرمەنی ، فەڕەنسی ، ئەڵمانی ، هیندی ، ئیتاڵی ، ڕوسیا ، تورکی ، + ١٣ تر</p>
+                <p style="font-family: regular;"><strong style="font-family: nrtbold;">قەبارەی ئەپ</strong> ٢٩١.٩مێگا بایت</p>
+            </div>
+            <div class="whats-new">
+                <h2 style="font-family: nrtbold;" >چی نوێ هەیە؟ </h2>
+                <p style="font-family: nrtregular;"> ١٣.٣٠.٠.٥٠ ڤێرژن</p>
+                <p style="font-family: nrtregular;"><strong style="font-family: nrtbold;" >ئەپدەیتی نوێ</strong> ٥ ڕۆژ پێش ئێستا</p>
+                <p style="font-family: nrtregular;"><strong style="font-family: nrtbold;">تایبەتمەندی</strong> کردنەوەی هەموو ئەو بەشانەی داوای پارە دەکات ، کڕین پاشان پاشگەزبوونەوە</p>
+            </div>
+            <div class="previews">
+                <h2 style="font-family: nrtbold;">ڕووکاری ئەپ</h2>
+                <div class="slideshow">
+                    <div class="slides">
+                        <img src="path_to_preview1.jpg" alt="Preview 1">
+                        <img src="path_to_preview2.jpg" alt="Preview 2">
+                        <video controls>
+                            <source src="path_to_preview_video.mp4" type="video/mp4">
+                            video
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- darbara-->
+        <div id="about" class="section">
+            <div style="font-family: nrtbold; font-size: 27px; text-align: right;" >دەربارە</div>
+<br>
+            <div class="about-content">
+                <div class="rotating-circle">
+                    <img src="img/icon.png" alt="About Image" class="about-image">
+
+                </div>
+            <h1 style="font-family: nrtregular;" >SHA Store</h1>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-button" style="font-family: nrtbold;"> چیە؟ SHA Store </button>
+                        <div class="accordion-content" style="font-family: nrtregular;">
+                            <p >  شا ستۆر بە زمانی شیرینی کوردی بەردەستە بۆ دابەزاندنی چەندین یاری و بەرنامە بە تایبەتمەندی و بەخۆڕایی بۆ بەکارهێنەرانی سیستەمی ئای ئۆئێس .</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" style="font-family: nrtbold;" >   زیانی هەیە ؟ SHA Store ئایە </button>
+                        <div class="accordion-content" style="font-family: nrtregular;">
+                            <p>ئێمە هەمیشە کارەکانمان بە باشترین شێواز ئەنجام داوە و بەبێ هیچ زیانێکی هەبێت بۆ بەکارهێنەران و هەمیشە هەوڵی ئەوەمان داوە کە باشترین و خێراترین و سەرکەوتوو ترین خزمەتگوزاری  بەردەست بکەین</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" style="font-family: nrtbold;" >ئایە ئاپەکان بە خۆڕایین؟</button>
+                        <div class="accordion-content" style="font-family: nrtregular;">
+                            <p>بەڵێ ، هەموو ئەپڵکەیشنەکان بۆ سیستەمی ئایفۆنە و بە خۆڕایی و بەبێ وەرگرتنی هیچ بڕە پارەیەک و وە سێرڤەری شا ستۆر لەسەر باوەڕپێکراوترینی ئەپڵە و بە خۆڕاییە ، بەڵام هەندێکجار ڕادەگیرێت و بۆ ماوەیەکی کاتی کاردەکات</p>
+                        </div>
+                    </div>
+<center>
+  <p style="font-family: nrtregular;" class="shadyar-text">
+‎    دروستکراوە لەلایەن : 
+    <a href="https://www.instagram.com/shadyar_hassan0?igsh=MXR0b2pmMzcxbHAzNg%3D%3D&utm_source=qr" target="_blank"  class="shadyar-link" >شادیار</a>
+  </p>
+</center>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom navigation bar -->
+    <nav class="bottom-nav">
+        <button onclick="showSection('main')">
+            <i class="fas fa-home"></i>
+            <span style="font-family: nrtregular;">سەرەکی</span>
+        </button>
+        <button onclick="showSection('about')">
+            <i class="fas fa-info-circle"></i>
+            <span style="font-family: nrtregular;">دەربارە</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
+`);
